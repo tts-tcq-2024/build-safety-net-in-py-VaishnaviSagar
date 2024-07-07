@@ -10,6 +10,7 @@ def get_soundex_code(c):
     }
     return mapping.get(c, '0')  # Default to '0' for non-mapped characters
  
+ 
 def generate_soundex(name):
     if not name:
         return ""
@@ -25,6 +26,7 @@ def generate_soundex(name):
             prev_code = code
         if len(soundex) == 4:
             break
+ 
     # Pad with zeros if necessary
     soundex = soundex.ljust(4, '0')
  
