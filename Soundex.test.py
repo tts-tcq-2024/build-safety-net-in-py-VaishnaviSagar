@@ -24,7 +24,7 @@ class TestSoundex(unittest.TestCase):
         self.assertEqual(get_soundex_code('R'), '6')
         self.assertEqual(get_soundex_code('z'), '2')
         self.assertEqual(get_soundex_code('1'), '0')
-     def test_consonants(self):
+    def test_consonants(self):
         self.assertEqual(generate_soundex("Bcdghjklmnpqrstvwxyz"), "B123")
  
 if __name__ == '__main__':
