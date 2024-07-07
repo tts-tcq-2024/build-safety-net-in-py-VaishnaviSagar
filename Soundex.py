@@ -30,4 +30,7 @@ def generate_soundex(name):
         if len(soundex) == 4:
             break
  
-    return soundex.ljust(4, '0')
+    if len(soundex) < 4:
+        soundex += '0' * (4 - len(soundex))
+ 
+    return soundex
