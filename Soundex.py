@@ -1,4 +1,13 @@
-soundex = name.upper()
+def get_soundex_code(c):
+    c = c.upper()
+    mapping = {
+        'B': '1', 'F': '1', 
+        'C': '2', 'G': '2', 
+        'D': '3', 'T': '3',
+    }
+    return mapping.get(c, '0')  # Default to '0' for non-mapped characters
+
+soundex = name
 prev_code = get_soundex_code(soundex)
  
 for char in name[1:]:
