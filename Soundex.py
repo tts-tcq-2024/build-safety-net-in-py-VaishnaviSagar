@@ -20,12 +20,9 @@ def generate_soundex(name):
         return ""
  
     soundex = name[0].upper()
-    prev_code = get_soundex_code(soundex)
- 
     for char in name[1:]:
         code = get_soundex_code(char)
-        if code != '0' and code != prev_code:
+        if code != '0':
             soundex += code
-            prev_code = code
  
     return soundex.ljust(4, '0')
