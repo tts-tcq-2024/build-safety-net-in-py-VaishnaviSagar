@@ -1,5 +1,7 @@
-def get_soundex_code(c):
-    c = c.upper()
+def get_soundex_code(char):
+    """
+    Returns the Soundex code for the given character.
+    """
     mapping = {
         'B': '1', 'F': '1', 'P': '1', 'V': '1',
         'C': '2', 'G': '2', 'J': '2', 'K': '2', 'Q': '2', 'S': '2', 'X': '2', 'Z': '2',
@@ -8,13 +10,15 @@ def get_soundex_code(c):
         'M': '5', 'N': '5',
         'R': '6'
     }
-    return mapping.get(c, '0')  # Default to '0' for non-mapped characters
+    return mapping.get(char.upper(), '0')
  
 def generate_soundex(name):
+    """
+    Generates the Soundex code for the given name.
+    """
     if not name:
         return ""
  
-    # Start with the first letter (capitalized)
     soundex = name[0].upper()
     prev_code = get_soundex_code(soundex)
  
@@ -26,7 +30,4 @@ def generate_soundex(name):
         if len(soundex) == 4:
             break
  
-    # Pad with zeros if necessary
-    soundex = soundex.ljust(4, '0')
- 
-    return soundex
+    return soundex.ljust(4, '0')
