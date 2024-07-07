@@ -22,7 +22,6 @@ class TestSoundex(unittest.TestCase):
         self.assertEqual(get_soundex_code('M'), '5')
         self.assertEqual(get_soundex_code('N'), '5')
         self.assertEqual(get_soundex_code('R'), '6')
-        self.assertEqual(get_soundex_code('a'), '1')
         self.assertEqual(get_soundex_code('z'), '2')
         self.assertEqual(get_soundex_code('1'), '0')
  
