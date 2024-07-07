@@ -7,7 +7,7 @@ def get_soundex_code(c):
     }
     return mapping.get(c, '0')  # Default to '0' for non-mapped characters
 
-soundex = name
+    soundex = name[0].upper()
 prev_code = get_soundex_code(soundex)
  
 for char in name[1:]:
@@ -19,6 +19,5 @@ for char in name[1:]:
         break
  
 # Pad with zeros if necessary
-soundex = soundex.ljust(4, '0')
- 
+soundex = soundex.ljust(4, '0') 
 return soundex
