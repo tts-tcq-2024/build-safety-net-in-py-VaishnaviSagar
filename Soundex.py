@@ -16,7 +16,7 @@ def generate_soundex(name):
         return ""
 def generate_soundex(name):
             prev_code = code
-        if len(soundex) == 4:
+    if len(soundex) == 4:
             break
 
     # Pad with zeros if necessary
