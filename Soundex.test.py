@@ -12,7 +12,7 @@ class TestSoundex(unittest.TestCase):
     def test_consonants(self):
         self.assertEqual(generate_soundex("Bcdghjklmnpqrstvwxyz"), "V145")
 
- def test_single_character(self):
+    def test_single_character(self):
         self.assertEqual(generate_soundex("V"), "00V0")
         self.assertEqual(generate_soundex("S"), "0S00")
  
