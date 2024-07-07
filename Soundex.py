@@ -14,7 +14,7 @@ def get_soundex_code(c):
 def generate_soundex(name):
     if not name:
         return ""
- def generate_soundex(name):
+def generate_soundex(name):
             prev_code = code
         if len(soundex) == 4:
             break
