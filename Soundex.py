@@ -25,4 +25,4 @@ for char in name[1:]:
          break
 # Pad with zeros if necessary
 soundex = soundex.ljust(4, '0')
-     return soundex
+  return soundex
