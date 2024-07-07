@@ -27,10 +27,5 @@ def generate_soundex(name):
         if code != '0' and code != prev_code:
             soundex += code
             prev_code = code
-        if len(soundex) == 4:
-            break
  
-    if len(soundex) < 4:
-        soundex = soundex.ljust(4, '0')
- 
-    return soundex
+    return soundex.ljust(4, '0')
