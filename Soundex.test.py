@@ -24,6 +24,11 @@ class TestSoundex(unittest.TestCase):
         self.assertEqual(get_soundex_code('R'), '6')
         self.assertEqual(get_soundex_code('z'), '2')
         self.assertEqual(get_soundex_code('1'), '0')
+    def test_generate_soundex(self):
+        """Test the generate_soundex function"""
+        self.assertEqual(generate_soundex(""), "")
+        self.assertEqual(generate_soundex("A"), "A000")
+
  
 if __name__ == '__main__':
     unittest.main()
